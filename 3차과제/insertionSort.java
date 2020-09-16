@@ -1,15 +1,14 @@
 package Week_3_assignment;
 
-public class insertionSort extends Thread {
+public class insertionSort {
 	double[] array;
 	
 	public insertionSort(double[] array) {
 		this.array = array;
 	}
 
-	@Override
+	public void sort() {
 	//insertion sort 및 정렬 수행 시간
-	public void run() {
 		System.out.println("삽입 정렬 시작");
 		long start = System.currentTimeMillis();
 		for(int i=1;i<array.length;i++) {
@@ -20,7 +19,9 @@ public class insertionSort extends Thread {
 		long end = System.currentTimeMillis();
 		
 		System.out.println("insertionSort 수행시간 : " + (end-start) +" milliSecond 입니다.");
+		System.out.println("삽입 정렬 종료");
 	}
+	
 	//두개의 double 값 비교 (return boolean)
 	private boolean less(double target1, double target2) {
 		boolean result;

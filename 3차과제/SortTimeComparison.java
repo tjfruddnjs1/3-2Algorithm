@@ -2,10 +2,7 @@ package Week_3_assignment;
 
 import java.util.Scanner;
 
-public class SortTimeComparison extends Thread{
-
-	public static long start;
-	public static long end;
+public class SortTimeComparison {
 	
 	public static void main(String[] args) {
 		Scanner scan= new Scanner(System.in);
@@ -20,9 +17,9 @@ public class SortTimeComparison extends Thread{
 		selectionSort select = new selectionSort(exArr);
 		shellSort shell = new shellSort(exArr);
 		
-		insert.start();
-		select.start();
-		shell.start();
+		insert.sort();
+		select.sort();
+		shell.sort();
 		
 		scan.close();
 	}
